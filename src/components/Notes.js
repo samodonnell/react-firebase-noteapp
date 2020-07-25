@@ -14,13 +14,16 @@ export class Notes extends Component {
           {this.props.notes.map((note) => (
             <div className='note' key={note.id}>
               <div className='note-title'>
-                <h3>{note.title}</h3>
-                <div
-                  className='remove'
-                  onClick={() => this.removeNote(note.id)}
-                >
-                  x
-                </div>
+                <h4>
+                  {note.title}
+                  <span
+                    className='remove'
+                    onClick={() => this.removeNote(note.id)}
+                  >
+                    Delete
+                  </span>
+                </h4>
+
                 <div className='note-content'>
                   <p>{note.note}</p>
                 </div>
